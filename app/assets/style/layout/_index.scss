@@ -1,0 +1,380 @@
+.font-azeret {
+    font-family: 'Azeret Mono', monospace;
+}
+
+// 綠色裝飾線
+.line {
+    width: 50px;
+    height: 3px;
+}
+
+// banner
+.banner {
+    .container {
+        height: 336px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_home_mobile.jpg");
+        @include background-img;
+
+        @include pc {
+            height: 534px;
+            background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_home.jpg");
+        }
+    }
+
+    .position-relative {
+        padding: 32px 28px;
+        background: #202020;
+        border: 1px solid #fff;
+
+        @include pc {
+            padding: 52px 85px;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem; //24px
+
+        @include pc {
+            font-size: 3rem; //48px
+        }
+
+        .graident {
+            @include gradient;
+        }
+    }
+
+    h3 {
+        font-size: 0.875rem; //14px
+
+        @include pc {
+            font-size: 1.125rem; //18px
+        }
+    }
+
+    .square {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+    }
+}
+
+//手把手帶你 親自到家教到會
+.advantage {
+    h4 {
+        font-size: 1.5rem; //24px
+        text-align: center;
+
+        @include pc {
+            font-size: 1.75rem; //18px
+            text-align: left;
+        }
+    }
+
+    .card {
+        .material-icons {
+            font-size: 50px;
+            @include gradient;
+        }
+
+        color: #fff;
+        background: #202020;
+        border-radius: 12px;
+
+        @include pc {
+            filter: grayscale(1);
+            color: gray;
+            background: $dark-gray;
+
+            &:hover {
+                filter: grayscale(0);
+                color: #fff;
+                background: #202020;
+                outline: 1px solid $primary;
+            }
+        }
+
+        &-body {
+            color: inherit;
+        }
+    }
+}
+
+// 預期上課流程 
+.flow {
+    h4 {
+        font-size: 1.375rem; //22px
+
+        @include pc {
+            font-size: 1.75rem; //28px
+        }
+    }
+
+    .card {
+        background-color: $dark;
+        border-radius: 12px;
+
+        .card-title {
+            transform: translateX(-8px) translateY(-71px);
+        }
+    }
+}
+
+// 你想要學習的程式，都在這裡
+.course {
+    h4 {
+        font-size: 1.5rem; //24px
+
+        @include pc {
+            font-size: 1.75rem; //28px
+        }
+    }
+
+    li {
+        font-size: 1rem;
+
+        @include pc {
+            font-size: 1.125rem;
+        }
+
+        a {
+            border-radius: 8px;
+
+            &:hover {
+                background: linear-gradient(104deg, #09ACF5, $primary);
+            }
+        }
+    }
+}
+
+// 熱門推薦課程
+.popular {
+    h4 {
+        font-size: 1.375rem; //22px
+
+        @include pc {
+            font-size: 1.75rem; //28px
+        }
+    }
+
+    .card {
+        border-radius: 24px;
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        &:hover {
+            outline: 2px solid $primary;
+        }
+    }
+
+    .booking {
+        background: linear-gradient(104deg, $secondary, $primary);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// 對症下藥，專案製作
+.advantage-img {
+    .opacity-80 {
+        opacity: 0.8;
+
+        @include pc {
+            opacity: 1;
+        }
+    }
+
+    .img1 {
+        height: 263px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info01.jpg");
+        @include background-img;
+
+        @include pc {
+            height: 615px;
+
+            &:hover {
+                background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info01.jpg");
+            }
+
+        }
+    }
+
+    .img2 {
+        height: 263px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info02.jpg");
+        @include background-img;
+
+        @include pc {
+            height: 615px;
+
+            &:hover {
+                background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info02.jpg");
+            }
+
+        }
+    }
+
+    .img3 {
+        height: 263px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info03.jpg");
+        @include background-img;
+
+        @include pc {
+            height: 615px;
+
+            &:hover {
+                background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info03.jpg");
+            }
+
+        }
+    }
+
+    .img4 {
+        height: 263px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info04.jpg");
+        @include background-img;
+
+        @include pc {
+            height: 615px;
+
+            &:hover {
+                background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/info04.jpg");
+            }
+
+        }
+    }
+}
+
+// 文章分享
+.article {
+    h4 {
+        font-size: 1.375rem; //22px
+
+        @include pc {
+            font-size: 1.75rem; //28px
+        }
+    }
+
+    .card:hover {
+        .squareRounded {
+            display: block;
+        }
+    }
+
+    .squareRounded {
+        display: none;
+        width: 32px;
+        height: 32px;
+
+        &-topLeft {
+            border-top: 2px solid $primary;
+            border-left: 2px solid $primary;
+            border-top-left-radius: 10px;
+        }
+
+        &-topRight {
+            border-top: 2px solid $primary;
+            border-right: 2px solid $primary;
+            border-top-right-radius: 10px;
+        }
+
+        &-bottomLeft {
+            border-bottom: 2px solid $primary;
+            border-left: 2px solid $primary;
+            border-bottom-left-radius: 10px;
+        }
+
+        &-bottomRight {
+            border-bottom: 2px solid $primary;
+            border-right: 2px solid $primary;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+// 專屬你的學習課程 超過 3000 位學員得到了程式超能力
+.feedback {
+    height: auto;
+    @include pc {
+        height: 733px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week6-202207/bg_share.jpg");
+        @include background-img;
+    }
+
+    .col-md-5 {
+        .swiper-img {
+            img {
+                border-radius: 24px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 10px;
+                left: -10px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #7C7E77;
+                border-radius: 24px;
+            }
+        }
+    }
+
+    .col-md-4 {
+        @include pc {
+            left: -3rem;
+        }
+
+        .feedback-card {
+            border-radius: 24px 24px 24px 0;
+
+            @include pc {
+                top: 251px;
+            }
+        }
+
+        img {
+            position: absolute;
+            right: 2rem;
+            top: -1.875rem;
+            @include pc{
+                top: -3rem;
+            }
+            max-width: 80px;
+            max-height: 80px;
+
+            @include pc {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        }
+    }
+}
+
+// 加入我們成為導師 
+.join-us {
+    .card {
+        border-radius: 24px;
+
+        .material-icons {
+            font-size: 103px;
+        }
+
+        h4 {
+            font-size: 1.5rem; //24px
+
+            @include pc {
+                font-size: 1.75rem; //28px
+            }
+        }
+
+        .btn {
+            border-radius: 8px;
+        }
+    }
+}
